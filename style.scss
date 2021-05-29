@@ -34,10 +34,20 @@ section#intro {
     place-items: center;
     grid: auto auto auto / auto auto;
     border-bottom-left-radius: 100px;
+    position: sticky;
+    top: -90vh;
     h1 {
         grid-column: 1 / span 2;
     }
     p {
         grid-column: 1 / span 2;
+    }
+}
+
+.info-section {
+    height: 90vh;
+    margin-top: 10vh;
+    h2 {
+        text-align: center;
     }
 }
