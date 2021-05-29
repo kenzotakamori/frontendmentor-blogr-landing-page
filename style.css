@@ -69,6 +69,13 @@ section#intro p {
   font-family: "Ubuntu", sans-serif;
   color: #4b5862;
 }
+.info-section .content {
+  display: grid;
+}
+
+section#design-future .content {
+  grid-template-columns: 1fr auto;
+}
 
 section#state-of-art {
   height: 60vh;
@@ -76,6 +83,17 @@ section#state-of-art {
   background-repeat: no-repeat;
   background-position: -35% 80%;
   border-radius: 0 100px 0 100px;
+}
+section#state-of-art .content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+section#benefits .content {
+  grid-template-columns: auto 1fr;
+}
+section#benefits h2 {
+  display: none;
 }
 
 footer {
