@@ -1,16 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
 body {
   margin: 0;
   font-size: 16px;
+  color: white;
+  font-family: "Overpass", sans-serif;
 }
 
 .container {
   width: 1440px;
+  height: 100%;
   margin: auto;
 }
 
 header {
   background-color: transparent;
   height: 10vh;
+  line-height: 10vh;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -19,6 +25,7 @@ header .header-desktop {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto 1fr auto auto;
+  place-items: center;
 }
 
 section#intro {
@@ -29,15 +36,19 @@ section#intro {
   background-size: 240%;
   background-position: 25% 50%;
   text-align: center;
-  display: grid;
-  place-items: center;
-  grid: auto auto auto/auto auto;
   border-bottom-left-radius: 100px;
   position: sticky;
   top: -90vh;
 }
+section#intro .content {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid: auto auto auto/auto auto;
+}
 section#intro h1 {
   grid-column: 1/span 2;
+  font-size: 3em;
 }
 section#intro p {
   grid-column: 1/span 2;
@@ -49,6 +60,31 @@ section#intro p {
 }
 .info-section h2 {
   text-align: center;
+  color: #1f3f5b;
+}
+.info-section h3 {
+  color: #1f3f5b;
+}
+.info-section p {
+  font-family: "Ubuntu", sans-serif;
+  color: #4b5862;
+}
+
+section#state-of-art {
+  height: 60vh;
+  background-image: url("/images/bg-pattern-circles.svg"), linear-gradient(to right, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-position: -35% 80%;
+  border-radius: 0 100px 0 100px;
+}
+
+footer {
+  background-color: #25252d;
+  color: #c8c8cb;
+  margin: 0;
+}
+footer ul {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
