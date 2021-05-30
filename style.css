@@ -28,6 +28,24 @@ header .header-desktop {
   place-items: center;
 }
 
+button {
+  height: 40px;
+  line-height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold;
+  color: #ff525d;
+  background-color: white;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+button:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
 section#intro {
   height: 100vh;
   width: 100%;
@@ -40,18 +58,33 @@ section#intro {
   position: sticky;
   top: -90vh;
 }
+section#intro .container {
+  display: grid;
+  place-content: center;
+}
 section#intro .content {
-  height: 100%;
+  height: 50vh;
   display: grid;
   place-items: center;
-  grid: auto auto auto/auto auto;
+  grid-template-rows: repeat(3, auto);
 }
 section#intro h1 {
-  grid-column: 1/span 2;
-  font-size: 3em;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
 }
 section#intro p {
-  grid-column: 1/span 2;
+  margin: 0;
+}
+section#intro button:last-child {
+  margin: 10px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+section#intro button:last-child:hover {
+  color: #ff7a85;
+  background-color: white;
 }
 
 .info-section {
