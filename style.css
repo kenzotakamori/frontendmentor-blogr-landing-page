@@ -94,20 +94,32 @@ section#intro button:last-child:hover {
 .info-section h2 {
   text-align: center;
   color: #1f3f5b;
+  font-size: 2.2em;
+  font-weight: 700;
 }
 .info-section h3 {
+  font-size: 1.8em;
+  font-weight: 700;
   color: #1f3f5b;
 }
 .info-section p {
   font-family: "Ubuntu", sans-serif;
   color: #4b5862;
+  line-height: 2em;
 }
-.info-section .content {
+.info-section .container {
   display: grid;
+  place-items: center;
+}
+.info-section .section-text {
+  width: 50%;
 }
 
-section#design-future .content {
-  grid-template-columns: 1fr auto;
+section#design-future {
+  background-image: url("/images/illustration-editor-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 120% 15%;
 }
 
 section#state-of-art {
@@ -122,11 +134,18 @@ section#state-of-art .content {
   grid-template-columns: auto 1fr;
 }
 
-section#benefits .content {
-  grid-template-columns: auto 1fr;
+section#benefits {
+  background-image: url("/images/illustration-laptop-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: -20% 15%;
 }
 section#benefits h2 {
   display: none;
+}
+section#benefits .section-text {
+  position: relative;
+  left: 20%;
 }
 
 footer {
