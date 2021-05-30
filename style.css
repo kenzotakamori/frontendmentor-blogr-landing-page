@@ -12,6 +12,11 @@ body {
   height: 100%;
   margin: auto;
 }
+@media (max-width: 800px) {
+  .container {
+    width: 375px;
+  }
+}
 
 header {
   background-color: transparent;
@@ -152,9 +157,46 @@ footer {
   background-color: #25252d;
   color: #c8c8cb;
   margin: 0;
+  height: 50vh;
+}
+@media (max-width: 800px) {
+  footer {
+    height: auto;
+  }
+}
+footer .content {
+  display: grid;
+  grid-auto-flow: column;
+  padding-top: 70px;
+}
+@media (max-width: 800px) {
+  footer .content {
+    grid-auto-flow: row;
+    text-align: center;
+  }
+  footer .content img {
+    margin: 0 auto 30px auto;
+  }
 }
 footer ul {
   margin: 0;
+  padding: 0;
+}
+footer h4 {
+  margin: 0 0 30px;
+}
+footer li {
+  list-style-type: none;
+  padding-block-start: 0;
+  line-height: 2em;
+}
+footer a {
+  text-decoration: none;
+  color: #c8c8cb;
+  font-weight: 400;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
