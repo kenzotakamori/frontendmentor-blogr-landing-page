@@ -29,6 +29,35 @@ header {
         display: grid;
         grid-template-columns: auto auto auto 1fr auto auto;
         place-items: center;
+        &_product {
+            &:hover ul.options-list {
+                opacity: 1;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+    }
+    ul {
+        position: absolute;
+        opacity: 0;
+        list-style-type: none;
+        padding: 0;
+        background-color: white;
+        color: black;
+        line-height: 2.5em;
+        padding: 20px;
+        border-radius: 5px;
+        width: 120px;
+        transition: all 0.3s ease;
+        li:hover {
+            font-weight: 700;
+            cursor: pointer;
+        }
+        a {
+            color: black;
+        }
     }
 }
 
