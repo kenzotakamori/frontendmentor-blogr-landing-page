@@ -27,11 +27,21 @@ header {
     .header-desktop {
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto auto 1fr auto auto;
+        gap: 30px;
+        grid-template-columns: auto auto auto auto 1fr auto auto;
         place-items: center;
+        span:after {
+            content: url('/images/icon-arrow-dark.svg');
+            color: white;
+        }
         &_product {
-            &:hover ul.options-list {
-                opacity: 1;
+            &:hover {
+                span {
+                    text-decoration: underline;
+                }
+                ul.options-list {
+                    opacity: 1;
+                } 
             }
         }
     }
