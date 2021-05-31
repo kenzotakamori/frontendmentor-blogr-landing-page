@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -9,7 +13,7 @@ body {
 }
 
 .container {
-    width: 1440px;
+    width: 1200px;
     height: 100%;
     margin: auto;
     @media (max-width: 800px) {
@@ -22,7 +26,7 @@ header {
     height: 10vh;
     line-height: 10vh;
     position: sticky;
-    top: 0;
+    top: -5vh;
     z-index: 2;
     font-weight: 700;
     .header-desktop {
@@ -33,6 +37,7 @@ header {
         gap: 30px;
         grid-template-columns: auto auto auto auto 1fr auto auto;
         place-items: center;
+        padding-top: 5vh;
         & > img {
             margin-right: 40px;
         }
@@ -69,6 +74,7 @@ header {
         width: 120px;
         transition: all 0.3s ease;
         font-weight: 400;
+        box-shadow: 0 0 .5em hsl(240, 10%, 16%);
         li:hover {
             font-weight: 700;
             cursor: pointer;
@@ -98,9 +104,10 @@ button {
 }
 
 section#intro {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     margin-top: -10vh;
+    margin-bottom: 20vh;
     background-image: url('/images/bg-pattern-intro.svg'), 
         linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-size: 240%;
@@ -108,13 +115,16 @@ section#intro {
     text-align: center;
     border-bottom-left-radius: 60px;
     position: sticky;
-    top: -90vh;
+    top: -70vh;
+    z-index: 1;
     .container {
         display: grid;
         place-content: center;
     }
     .content {
-        height: 50vh;
+        height: 35vh;
+        position: relative;
+        top: 10vh;
         display: grid;
         place-items: center;
         grid-template-rows: repeat(3, auto);
@@ -125,7 +135,8 @@ section#intro {
         margin: 0;
     }
     p {
-        margin: 0;
+        margin-top: -1vh;
+        font-size: 1.4em;
     }
     button:last-child {
         margin: 10px;
@@ -140,8 +151,7 @@ section#intro {
 }
 
 .info-section {
-    height: 90vh;
-    margin-top: 10vh;
+    height: 100vh;
     h2 {
         text-align: center;
         color: hsl(208, 49%, 24%);
@@ -162,20 +172,28 @@ section#intro {
         display: grid;
         place-items: center;
     }
+    .content {
+        display: grid;
+        grid-auto-flow: column;
+    }
     .section-text {
-        width: 50%;
+        width: 45%;
     }
 }
 
 section#design-future {
-    background-image:  url('/images/illustration-editor-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 120% 15%;
+    img {
+        z-index: 0;
+        position: absolute;
+        top: 100%;
+        left: 55%;
+    }
 }
 
 section#state-of-art {
     height: 60vh;
+    margin-top: 30vh;
+    margin-bottom: 20vh;
     background-image: url('/images/bg-pattern-circles.svg'), 
         linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     background-repeat: no-repeat;
@@ -189,16 +207,18 @@ section#state-of-art {
 
 
 section#benefits {
-    background-image:  url('/images/illustration-laptop-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: -20% 15%;
+    img {
+        z-index: 0;
+        position: absolute;
+        top: 300%;
+        left: -20%;
+    }
     h2 {
         display: none;
     }
     .section-text {
         position: relative;
-        left: 20%;
+        left: 50%;
     }
 }
 

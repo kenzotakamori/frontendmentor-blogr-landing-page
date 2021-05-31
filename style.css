@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -8,7 +12,7 @@ body {
 }
 
 .container {
-  width: 1440px;
+  width: 1200px;
   height: 100%;
   margin: auto;
 }
@@ -23,7 +27,7 @@ header {
   height: 10vh;
   line-height: 10vh;
   position: sticky;
-  top: 0;
+  top: -5vh;
   z-index: 2;
   font-weight: 700;
 }
@@ -35,6 +39,7 @@ header .header-desktop {
   gap: 30px;
   grid-template-columns: auto auto auto auto 1fr auto auto;
   place-items: center;
+  padding-top: 5vh;
 }
 header .header-desktop > img {
   margin-right: 40px;
@@ -69,6 +74,7 @@ header ul {
   width: 120px;
   transition: all 0.3s ease;
   font-weight: 400;
+  box-shadow: 0 0 0.5em #25252d;
 }
 header ul li:hover {
   font-weight: 700;
@@ -97,23 +103,27 @@ button:hover {
 }
 
 section#intro {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   margin-top: -10vh;
+  margin-bottom: 20vh;
   background-image: url("/images/bg-pattern-intro.svg"), linear-gradient(to right, #ff8f70, #ff3d54);
   background-size: 240%;
   background-position: 25% 50%;
   text-align: center;
   border-bottom-left-radius: 60px;
   position: sticky;
-  top: -90vh;
+  top: -70vh;
+  z-index: 1;
 }
 section#intro .container {
   display: grid;
   place-content: center;
 }
 section#intro .content {
-  height: 50vh;
+  height: 35vh;
+  position: relative;
+  top: 10vh;
   display: grid;
   place-items: center;
   grid-template-rows: repeat(3, auto);
@@ -124,7 +134,8 @@ section#intro h1 {
   margin: 0;
 }
 section#intro p {
-  margin: 0;
+  margin-top: -1vh;
+  font-size: 1.4em;
 }
 section#intro button:last-child {
   margin: 10px;
@@ -138,8 +149,7 @@ section#intro button:last-child:hover {
 }
 
 .info-section {
-  height: 90vh;
-  margin-top: 10vh;
+  height: 100vh;
 }
 .info-section h2 {
   text-align: center;
@@ -161,19 +171,25 @@ section#intro button:last-child:hover {
   display: grid;
   place-items: center;
 }
+.info-section .content {
+  display: grid;
+  grid-auto-flow: column;
+}
 .info-section .section-text {
-  width: 50%;
+  width: 45%;
 }
 
-section#design-future {
-  background-image: url("/images/illustration-editor-desktop.svg");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: 120% 15%;
+section#design-future img {
+  z-index: 0;
+  position: absolute;
+  top: 100%;
+  left: 55%;
 }
 
 section#state-of-art {
   height: 60vh;
+  margin-top: 30vh;
+  margin-bottom: 20vh;
   background-image: url("/images/bg-pattern-circles.svg"), linear-gradient(to right, #2c2d3f, #3f4164);
   background-repeat: no-repeat;
   background-position: -35% 80%;
@@ -184,18 +200,18 @@ section#state-of-art .content {
   grid-template-columns: auto 1fr;
 }
 
-section#benefits {
-  background-image: url("/images/illustration-laptop-desktop.svg");
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: -20% 15%;
+section#benefits img {
+  z-index: 0;
+  position: absolute;
+  top: 300%;
+  left: -20%;
 }
 section#benefits h2 {
   display: none;
 }
 section#benefits .section-text {
   position: relative;
-  left: 20%;
+  left: 50%;
 }
 
 footer {
