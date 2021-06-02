@@ -28,7 +28,7 @@ header {
     height: 70px;
     z-index: 2;
     font-weight: 700;
-    .header-desktop {
+    .header {
         font-family: 'Ubuntu', sans-serif;
         font-weight: 500;
         width: 100%;
@@ -40,7 +40,7 @@ header {
         & > img {
             margin-right: 40px;
         }
-        &_options {
+        .header-desktop {
             img {
                 filter: brightness(0) invert(1);
                 padding-left: 5px;
@@ -54,6 +54,9 @@ header {
                     opacity: 1;
                 } 
             }
+        }
+        .header-mobile {
+            display: none;
         }
     }
     a {
@@ -80,6 +83,20 @@ header {
         }
         a {
             color: black;
+        }
+    }
+    @media (max-width: 800px) {
+        .header {
+            grid-template-columns: auto 1fr auto;
+            & > :is(a, button) {
+                display: none;
+            }
+            .header-desktop {
+                display: none;
+            }
+            .header-mobile {
+                display: block;
+            }
         }
     }
 }
@@ -145,6 +162,24 @@ section#intro {
         &:hover {
             color:hsl(355, 100%, 74%);
             background-color: hsl(0, 0%, 100%);
+        }
+    }
+    @media (max-width: 800px) {
+        height: 700px;
+        background-image: url('/images/bg-pattern-intro.svg'), 
+            linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-position: 40% 30%;
+        top: -630px;
+        .content {
+            top: 0;
+        }
+        h1 {
+            font-size: 2.625rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 40px;
         }
     }
 }

@@ -30,7 +30,7 @@ header {
   z-index: 2;
   font-weight: 700;
 }
-header .header-desktop {
+header .header {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   width: 100%;
@@ -40,21 +40,24 @@ header .header-desktop {
   grid-template-columns: auto auto auto auto 1fr auto auto;
   place-items: center;
 }
-header .header-desktop > img {
+header .header > img {
   margin-right: 40px;
 }
-header .header-desktop_options img {
+header .header .header-desktop img {
   filter: brightness(0) invert(1);
   padding-left: 5px;
 }
-header .header-desktop_options:hover {
+header .header .header-desktop:hover {
   cursor: pointer;
 }
-header .header-desktop_options:hover span {
+header .header .header-desktop:hover span {
   text-decoration: underline;
 }
-header .header-desktop_options:hover ul.options-list {
+header .header .header-desktop:hover ul.options-list {
   opacity: 1;
+}
+header .header .header-mobile {
+  display: none;
 }
 header a {
   text-decoration: none;
@@ -81,6 +84,20 @@ header ul li:hover {
 }
 header ul a {
   color: black;
+}
+@media (max-width: 800px) {
+  header .header {
+    grid-template-columns: auto 1fr auto;
+  }
+  header .header > :is(a, button) {
+    display: none;
+  }
+  header .header .header-desktop {
+    display: none;
+  }
+  header .header .header-mobile {
+    display: block;
+  }
 }
 
 button {
@@ -145,6 +162,25 @@ section#intro button:last-child {
 section#intro button:last-child:hover {
   color: #ff7a85;
   background-color: white;
+}
+@media (max-width: 800px) {
+  section#intro {
+    height: 700px;
+    background-image: url("/images/bg-pattern-intro.svg"), linear-gradient(#ff8f70, #ff3d54);
+    background-position: 40% 30%;
+    top: -630px;
+  }
+  section#intro .content {
+    top: 0;
+  }
+  section#intro h1 {
+    font-size: 2.625rem;
+  }
+  section#intro p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
 
 .info-section {
