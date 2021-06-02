@@ -67,7 +67,7 @@ header {
         background-color: white;
         color: black;
         line-height: 2.5rem;
-        margin: 0;
+        margin: 20px 0 0 0;
         padding: 20px;
         border-radius: 5px;
         width: 120px;
@@ -174,25 +174,24 @@ section#intro {
     }
     .content {
         display: grid;
-        grid-auto-flow: column;
+        grid-template-columns: 500px 700px;
     }
     .section-text {
-        width: 45%;
+        margin-top: 50px;
     }
 }
 
 section#design-future {
     img {
         z-index: 0;
-        position: absolute;
-        top: 100%;
-        left: 55%;
+        position: relative;
+        left: 25%;
+        top: -10%;
     }
 }
 
 section#state-of-art {
-    height: 60vh;
-    min-height: 400px;
+    height: 400px;
     margin-top: 30vh;
     margin-bottom: 20vh;
     background-image: url('/images/bg-pattern-circles.svg'), 
@@ -200,6 +199,11 @@ section#state-of-art {
     background-repeat: no-repeat;
     background-position: -35% 80%;
     border-radius: 0 100px 0 100px;
+    img {
+        position: relative;
+        left: -10%;
+        top: -12%;
+    }
     .content {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -220,21 +224,25 @@ section#state-of-art {
 section#benefits {
     img {
         z-index: 0;
-        position: absolute;
-        top: 300%;
-        left: -20%;
+        position: relative;
+        left: -55%;
+        top: -10%;
     }
     h2 {
         display: none;
     }
+    .content {
+        width: 100%;
+        grid-template-columns: 700px 500px;
+    }
     .section-text {
-        position: relative;
-        left: 50%;
+        
     }
 }
 
 footer {
     background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 60px;
     color: hsl(240, 2%, 79%);
     margin: 0;
     min-height: 350px;
