@@ -214,6 +214,22 @@ section#intro button:last-child:hover {
 .info-section .section-text {
   margin-top: 50px;
 }
+@media (max-width: 800px) {
+  .info-section {
+    height: auto;
+    text-align: center;
+  }
+  .info-section .content {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+  .info-section img {
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: auto;
+  }
+}
 
 section#design-future img {
   z-index: 0;
@@ -265,6 +281,23 @@ section#benefits .content {
   width: 100%;
   grid-template-columns: 700px 500px;
 }
+@media (max-width: 800px) {
+  section#benefits {
+    height: auto;
+    text-align: center;
+  }
+  section#benefits .content {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+  }
+  section#benefits img {
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: auto;
+  }
+}
+
 footer {
   background-color: #25252d;
   border-top-right-radius: 60px;
