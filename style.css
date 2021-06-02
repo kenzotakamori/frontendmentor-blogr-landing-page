@@ -119,6 +119,7 @@ button:hover {
 }
 
 .hamburger-menu {
+  display: none;
   height: auto;
   background-color: white;
   position: absolute;
@@ -179,6 +180,9 @@ button:hover {
 .hamburger-menu button {
   color: white;
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+}
+.hamburger-menu.open {
+  display: block;
 }
 
 section#intro {
