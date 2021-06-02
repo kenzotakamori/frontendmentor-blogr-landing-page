@@ -222,8 +222,6 @@ section#intro {
             grid-auto-flow: row;
         }
         img {
-            left: 0%;
-            top: 0%;
             width: 100%;
             height: auto;
         }
@@ -236,6 +234,11 @@ section#design-future {
         position: relative;
         left: 25%;
         top: -10%;
+        @media (max-width: 800px) {
+            left: 0%;
+            top: 0%;
+            grid-row: 1;
+        }
     }
 }
 
@@ -268,6 +271,26 @@ section#state-of-art {
             line-height: 2rem;
         }
     }
+    @media (max-width: 800px) {
+        height: 750px;
+        background-position: 50% -110%;
+        background-size: 150%;
+        text-align: center;
+        .content {
+            display: block;
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            left: 0%;
+            margin-top: -180px;
+        }
+        .section-text {
+            margin-top: 0;
+            padding-left: 0;
+        }
+    }
 }
 
 section#benefits {
@@ -276,6 +299,10 @@ section#benefits {
         position: relative;
         left: -55%;
         top: -10%;
+        @media (max-width: 800px) {
+            left: 0%;
+            top: 0%;
+        }
     }
     h2 {
         display: none;

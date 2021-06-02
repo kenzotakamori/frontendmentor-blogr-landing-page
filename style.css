@@ -224,8 +224,6 @@ section#intro button:last-child:hover {
     grid-auto-flow: row;
   }
   .info-section img {
-    left: 0%;
-    top: 0%;
     width: 100%;
     height: auto;
   }
@@ -236,6 +234,13 @@ section#design-future img {
   position: relative;
   left: 25%;
   top: -10%;
+}
+@media (max-width: 800px) {
+  section#design-future img {
+    left: 0%;
+    top: 0%;
+    grid-row: 1;
+  }
 }
 
 section#state-of-art {
@@ -267,12 +272,40 @@ section#state-of-art .section-text p {
   font-family: "Ubuntu", sans-serif;
   line-height: 2rem;
 }
+@media (max-width: 800px) {
+  section#state-of-art {
+    height: 750px;
+    background-position: 50% -110%;
+    background-size: 150%;
+    text-align: center;
+  }
+  section#state-of-art .content {
+    display: block;
+    width: 100%;
+  }
+  section#state-of-art img {
+    width: 100%;
+    height: auto;
+    left: 0%;
+    margin-top: -180px;
+  }
+  section#state-of-art .section-text {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
 
 section#benefits img {
   z-index: 0;
   position: relative;
   left: -55%;
   top: -10%;
+}
+@media (max-width: 800px) {
+  section#benefits img {
+    left: 0%;
+    top: 0%;
+  }
 }
 section#benefits h2 {
   display: none;
