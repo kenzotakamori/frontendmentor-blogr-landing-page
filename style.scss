@@ -119,6 +119,74 @@ button {
     }
 }
 
+.hamburger-menu {
+    // display: none;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 5;
+    width: 375px;
+    border-radius: 5px;
+    box-shadow: 0 0 .5em hsl(240, 10%, 16%);
+    line-height: 3rem;
+    &_container {
+        padding: 30px;
+    }
+    .option-title {
+        span {
+            color: #000000;
+            font-weight: 700;
+            padding-right: 5px;
+        }
+        img {
+            transition: transform .2s ease;
+        }
+    }
+    .hamburger-menu_option.active {
+        .option-title span {
+            color: hsl(207, 13%, 34%)
+        }
+        .option-title img {
+            transform: rotate(180deg);
+        }
+        ul {
+            display: block;
+        }
+    }
+    ul {
+        display: none;
+        padding: 20px;
+        list-style-type: none;
+        background-color:hsl(0, 0%, 90%);
+        border-radius: 5px;
+        line-height: 3rem;
+        margin-bottom: 30px;
+        a {
+            font-size: 1rem;
+        }
+    }
+    a {
+        text-decoration: none;
+        color:hsl(207, 13%, 34%);
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    .login {
+        border-top: 1px solid hsl(0, 0%, 90%);
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    button {
+        color: white;
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+}
+
 section#intro {
     height: 600px;
     width: 100%;
