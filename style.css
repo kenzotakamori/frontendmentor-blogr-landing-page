@@ -181,8 +181,10 @@ button:hover {
   color: white;
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
 }
-.hamburger-menu.open {
-  display: block;
+@media (max-width: 800px) {
+  .hamburger-menu.open {
+    display: block;
+  }
 }
 
 section#intro {
